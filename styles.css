@@ -724,3 +724,33 @@ p, h1, h2, h3 {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+/* Fix for iPhone 11 Pro Max header overlap */
+#home {
+    padding-top: 100px !important; /* Extra space for fixed header */
+    margin-top: 0;
+    min-height: 90vh; /* Reduced from 100vh to prevent cropping */
+}
+
+/* Safari-specific height calculation */
+@supports (-webkit-touch-callout: none) {
+    #home {
+        min-height: -webkit-fill-available;
+        padding-top: 100px;
+    }
+}
+
+/* Header adjustments */
+nav {
+    height: 70px; /* Reduced from 80px */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+    padding-top: 20px; /* Extra push down */
+}
+
+/* Typing text specific fix */
+.typing-text {
+    margin: 15px 0 25px 0 !important;
+    line-height: 1.4;
+}
