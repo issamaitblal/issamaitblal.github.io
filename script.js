@@ -125,3 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+window.addEventListener('load', function() {
+   
+    const headerHeight = document.querySelector('nav').offsetHeight;
+    document.getElementById('home').style.paddingTop = `${headerHeight + 20}px`;
+    
+   
+    setTimeout(function() {
+        document.body.style.overflow = 'auto';
+    }, 500);
+});
